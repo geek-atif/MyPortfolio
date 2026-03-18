@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  ArrowUp,
   Moon,
   Sun,
   Github,
@@ -61,7 +62,7 @@ type Repo = {
 
 const profile = {
   name: "Atif Qamar",
-  title: "Senior Mobile Engineer",
+  title: "Senior Mobile Engineer / Ex-Razorpay",
   tagline:
     "Building polished AI-powered iOS, Android, and Flutter products from Bangalore with clean architecture, SDK craftsmanship, and high-performance mobile experiences.",
   email: "atifqamar29@gmail.com",
@@ -158,7 +159,7 @@ const projects: Project[] = [
     name: "Razorpay DigiPOS",
     type: "Fintech / POS app",
     description:
-      "Razorpay DigiPOS is a production-grade native iOS point-of-sale application built for Apple Premium Reseller stores to transform the in-store checkout experience using iPhone and iPad. The app enables store staff to accept Card payments, UPI, Payment Links, dynamic QR payments, No-Cost EMI, Exchange flows, Apple Forward Trade-In, and AppleCare purchase journeys directly from the shop floor, removing the need for traditional fixed checkout counters and making the payment experience faster, more flexible, and more customer-friendly. Built as a high-performance, business-critical payments product, DigiPOS focused heavily on reliability, seamless transaction handling, intuitive user experience, and efficient store operations across real-world retail environments. I contributed to building a robust native iOS experience with strong attention to architecture, performance optimization, device integrations, and scalable payment workflows, helping create a smooth end-to-end solution for modern in-store commerce. The product played a key role in improving transaction throughput, reducing checkout friction, empowering staff mobility, and contributing to 10x growth in GMV through a more seamless and conversion-focused payment journey.",
+      "Razorpay DigiPOS is a native iOS point-of-sale app built for Apple Premium Reseller stores to bring checkout directly to iPhone and iPad. It supports card payments, UPI, payment links, dynamic QR, no-cost EMI, exchange, Apple Forward Trade-In, and AppleCare flows in one fast retail experience. I worked on architecture, performance optimization, device integrations, and reliable payment workflows for a business-critical commerce product. The result was a smoother in-store journey, stronger staff mobility, faster billing, and meaningful contribution to 10x GMV growth.",
     tech: {
       core: [
         "iOS",
@@ -194,6 +195,13 @@ const projects: Project[] = [
         "Native iOS Development"
       ]
     },
+    highlights: [
+      "Built for Apple Premium Reseller stores with a mobile-first in-store checkout flow",
+      "Supported card, UPI, payment links, QR, EMI, exchange, trade-in, and AppleCare journeys",
+      "Improved checkout speed and staff mobility by moving payments directly to iPhone and iPad",
+      "Engineered as a business-critical native iOS product with strong reliability and performance focus",
+      "Contributed to a smoother payment journey that helped drive 10x GMV growth"
+    ],
     images: screenshotSets.digipos,
     links: [
       { label: "App Store", href: "https://apps.apple.com/in/app/razorpay-digipos/id6520383285", icon: Store },
@@ -214,7 +222,7 @@ const projects: Project[] = [
     name: "Pukaar AI",
     type: "AI-powered mobile app",
     description:
-      "As seen on Shark Tank India, Pukaar AI is an AI baby care and health tracking app built to help parents feel calmer, more informed, and more confident through the early stages of parenting. The app combines baby cry analysis, everyday parenting guidance, growth-stage support, and practical newborn care insights so families can better understand feeding, sleep, routines, development milestones, and common discomfort signals. It also brings together digital parenting support with expert-backed direction from pediatricians, lactation consultants, nutritionists, and sleep specialists, creating a more reassuring and structured experience for first-time parents navigating real day-to-day baby care.",
+      "Pukaar AI is an AI-powered baby care and health tracking app designed to help new parents feel calmer, more informed, and more confident. The product combines cry analysis, feeding and sleep guidance, growth-stage support, milestone tracking, and practical newborn care insights in a single Flutter experience. It also connects digital parenting support with expert-backed guidance from pediatricians and specialists. I helped shape a polished, cross-platform product focused on trust, clarity, engagement, and everyday usability, with public visibility from Shark Tank India.",
     tech: {
       core: ["Flutter", "Dart", "Clean Architecture", "BLoC"],
       analytics: ["Mixpanel Analytics", "Facebook App Events", "Microsoft Clarity", "AppsFlyer Attribution"],
@@ -223,6 +231,13 @@ const projects: Project[] = [
       features: ["Sign in with Apple", "Video Player Integration"],
       engineering: ["Performance Optimization", "Cross-Platform Development"]
     },
+    highlights: [
+      "AI-powered parenting app focused on early baby care, routines, and health guidance",
+      "Combined cry analysis, expert-backed support, and milestone-based care insights in one product",
+      "Built a reassuring mobile experience for first-time parents navigating everyday baby needs",
+      "Shipped cross-platform Flutter architecture with analytics, attribution, and engagement tooling",
+      "Featured on Shark Tank India as part of the product’s public launch visibility"
+    ],
     images: screenshotSets.pukaar,
     links: [
       //{ label: "Case Study", href: "#", icon: ExternalLink },
@@ -236,7 +251,7 @@ const projects: Project[] = [
     name: "Razorpay POS Service",
     type: "Fintech / POS app",
     description:
-      "Razorpay POS Service is a native Android payments integration platform built to bring Razorpay’s POS capabilities directly into merchant business apps. Created for integrated enterprise and retail use cases, the product enables store staff and delivery agents to collect payments through their existing operational workflows while supporting a broad range of modes including Cards, UPI, QR Code, SMS Pay Links, Bank EMI, Brand EMI, wallets, cash, and cheque. The app is designed to operate both independently and alongside POS hardware, with fast device connectivity over Bluetooth or Wi-Fi, enabling flexible payment collection across retail counters, on-floor operations, and field environments. Built for production-scale reliability, the platform emphasizes secure integration, configurable payment journeys, session management, Android-native performance, stability, and smooth transaction execution in business-critical scenarios. I helped engineer a robust Android-native experience focused on scalable payment workflows, reliability, device integration, and seamless usability for high-impact merchant operations.",
+      "Razorpay POS Service is a native Android payments integration platform that brings Razorpay POS capabilities directly into merchant business apps. It supports cards, UPI, QR, SMS pay links, bank EMI, brand EMI, wallets, cash, and cheque across retail counters, on-floor operations, and delivery workflows. The product works with POS hardware over Bluetooth and Wi-Fi while keeping payment journeys configurable, secure, and reliable. I contributed to Android-native architecture, device integration, session management, and scalable merchant payment flows for enterprise-grade operations.",
     tech: {
       core: [
         "Android Native",
@@ -278,6 +293,13 @@ const projects: Project[] = [
         "Secure Payment Orchestration"
       ]
     },
+    highlights: [
+      "Embedded Razorpay POS capabilities directly into merchant business applications",
+      "Supported store staff and delivery-agent collections across integrated operational workflows",
+      "Handled a wide range of modes including cards, UPI, QR, pay links, EMI, wallets, cash, and cheque",
+      "Built for Android-native reliability with hardware connectivity over Bluetooth and Wi-Fi",
+      "Focused on scalable payment orchestration for enterprise and retail merchant environments"
+    ],
 
     images: screenshotSets.posService,
     links: [
@@ -295,7 +317,7 @@ const projects: Project[] = [
     name: "Razorpay Turbo",
     type: "Flutter payments SDK / plugin",
     description:
-      "Razorpay Turbo is a cross-platform Flutter payments SDK built to bring Razorpay’s native checkout experience into Flutter applications across Android, iOS, and web. Designed as a wrapper over Razorpay’s underlying native SDKs, it enables teams to integrate secure and scalable payment flows with a single Flutter-facing interface while still leveraging platform-native checkout capabilities. The SDK supports event-driven payment handling for success, failure, and external wallet flows, and is built to work with server-generated order creation for secure payment processing and request integrity. It also provides configurable checkout options such as prefill data, branding, theme customization, timeout handling, and payment method configuration to help improve conversion and reduce checkout friction. From an engineering standpoint, the work involved building and maintaining a clean Flutter plugin layer over native platforms, ensuring smooth bridge communication, platform compatibility, stable callback handling, and production-grade developer experience for merchants integrating Razorpay checkout into their apps. This project reflects strong expertise in SDK development, cross-platform architecture, payment orchestration, native bridge design, and developer-focused product engineering.",
+      "Razorpay Turbo is a cross-platform Flutter payments SDK that exposes Razorpay’s native checkout flows through a single Flutter plugin for Android, iOS, and web. It wraps the underlying native SDKs, supports secure order-based payment processing, and handles success, failure, and external wallet events through stable callback flows. The SDK also enables prefill, branding, theme customization, timeout control, and payment method configuration to improve merchant conversion and developer experience. My work focused on plugin architecture, platform bridging, interoperability, and production-grade integration quality.",
     tech: {
       core: [
         "Flutter Plugin Development",
@@ -333,13 +355,13 @@ const projects: Project[] = [
         "Integration Experience Optimization"
       ]
     },
-    // highlights: [
-    //   "Built as a Flutter wrapper over Razorpay’s native Android and iOS SDKs",
-    //   "Supports Android, iOS, and web targets",
-    //   "Uses event-based communication for payment success, failure, and external wallet flows",
-    //   "Supports secure server-side order creation and order_id-based checkout flows",
-    //   "Allows checkout customization through prefill, theme, and configuration options"
-    // ],
+    highlights: [
+      "Built as a Flutter wrapper over Razorpay’s native Android and iOS checkout SDKs",
+      "Provided a single plugin surface for Android, iOS, and web payment integration",
+      "Handled payment success, failure, and external wallet events through stable callback flows",
+      "Supported secure server-side order creation and order-based checkout orchestration",
+      "Improved developer experience with configurable branding, prefill, methods, and timeout controls"
+    ],
     images: screenshotSets.turbo,
     links: [
       { label: "pub.dev", href: "https://pub.dev/packages/razorpay_turbo", icon: ExternalLink },
@@ -351,7 +373,7 @@ const projects: Project[] = [
     name: "AiDash IVMS FieldPro",
     type: "Enterprise field operations / native iOS app",
     description:
-      "AiDash IVMS FieldPro is a production-grade native iOS application built for utility field crews and managers to streamline vegetation-risk operations around geographically distributed assets. The app enables users to report vegetation risks, execute trimming and tree-removal workflows, and manage hazardous trees and grow-ins through secure, highly defined field workflows designed for distributed teams. Built for real-world field conditions, the product emphasizes structured execution, operational reliability, offline usability, and map-driven decision support to help crews work effectively across remote environments. Recent product enhancements introduced Hazard Tree Management workflows, expanded offline access with up to 4x more downloadable map and data coverage, richer map layers, and more contextual field information in cards and detail views for faster on-site decision-making. I contributed to building a robust native iOS experience focused on scalable field workflows, offline-first usability, map-based interfaces, performance, and dependable execution in enterprise utility operations.",
+      "AiDash IVMS FieldPro is a native iOS field operations app built for utility crews and managers handling vegetation-risk workflows around distributed assets. It supports risk reporting, trimming, tree removal, hazardous tree management, and grow-in tracking through structured, secure, map-driven workflows. The product is designed for real field conditions with offline-first access, rich geospatial context, and dependable execution across remote environments. I worked on scalable iOS architecture, performance, offline usability, and workflow reliability, including enhancements that expanded downloadable coverage by up to 4x.",
     tech: {
       core: [
         "iOS Native",
@@ -406,7 +428,7 @@ const projects: Project[] = [
     name: "WhiteHaX CyberSafe",
     type: "Cybersecurity / Android native app",
     description:
-      "WhiteHaX CyberSafe is a production-grade native Android cybersecurity application built to help users assess and strengthen the security posture of their mobile devices. The product is designed as a cloud-managed mobile security platform that evaluates device cyber-readiness by analyzing operating system settings, application security configurations, privacy posture, and network-level exposure across a range of threat scenarios. It provides a holistic approach to mobile protection by combining device verification, network security analysis, phishing and malware risk detection, privacy-focused safeguards, and guided insights that help users take corrective action. The platform also supports capabilities such as on-demand Wi-Fi security validation, VPN-backed protection, and broader household device security visibility, making it valuable for both personal and consumer cyber-protection use cases. Built for real-world reliability, the app demanded strong focus on Android-native performance, secure data handling, cloud-connected threat intelligence, stable diagnostics, intuitive risk presentation, and smooth user experience across varied device conditions. I contributed to building a scalable Android-native security product centered on cyber-readiness assessment, privacy-first design, network protection, and dependable end-user mobile security workflows.",
+      "WhiteHaX CyberSafe is a native Android cybersecurity app built to assess and improve the security posture of mobile devices. It combines device verification, OS and app configuration analysis, privacy checks, network risk detection, phishing and malware defense, Wi-Fi validation, and VPN-backed protection in one cloud-managed product. The experience is designed to translate complex cyber-readiness signals into clear guidance and action for end users. I contributed to Android-native architecture, secure data handling, cloud connectivity, diagnostics, and reliable mobile security workflows.",
     tech: {
       core: [
         "Android Native",
@@ -460,37 +482,42 @@ const projects: Project[] = [
 
 ];
 
-const experience: ExperienceItem[] = [
-  {
-    company: "AiDash",
-    role: "Senior Software Engineer (SDE-3)",
-    period: "Aug 2025 — Present",
-    points: [
-      "Leading AI-powered mobile application development for intelligent infrastructure workflows.",
-      "Designing modular architecture and AI-driven service layers for scalable delivery.",
-      "Improving performance, maintainability, and engineering quality across mobile systems.",
-    ],
-  },
-  {
-    company: "Razorpay",
-    role: "Lead Software Engineer",
-    period: "Dec 2020 — Aug 2025",
-    points: [
-      "Built and scaled DigiPOS and payments products across mobile platforms.",
-      "Worked on high-impact fintech experiences spanning card, UPI, payment links, and EMI.",
-      "Collaborated deeply with backend, QA, and product to drive production launches.",
-    ],
-  },
-  {
-    company: "Aujas Cybersecurity",
-    role: "Software Engineer",
-    period: "May 2018 — Dec 2020",
-    points: [
-      "Developed mobile solutions aligned with enterprise and security-focused client requirements.",
-      "Built a strong base in Android architecture, delivery discipline, and production support.",
-    ],
-  },
-];
+const experience: ExperienceItem[] =
+  [
+    {
+      company: "AiDash",
+      role: "Senior Software Engineer (SDE-3)",
+      period: "Aug 2025 — Present",
+      points: [
+        "Leading AI-powered mobile product development for intelligent infrastructure and field operations use cases across enterprise workflows.",
+        "Driving architecture-first engineering across iOS and cross-platform systems with strong emphasis on scalability, modularity, and long-term maintainability.",
+        "Building offline-capable, map-driven, and workflow-centric mobile experiences that help field teams execute reliably in real-world operational environments.",
+        "Improving app performance, code quality, and release confidence through stronger engineering practices, production hardening, and system-level optimization."
+      ],
+    },
+    {
+      company: "Razorpay",
+      role: "Lead Software Engineer",
+      period: "Dec 2020 — Aug 2025",
+      points: [
+        "Built and scaled high-impact mobile payments products across iOS, Android, and Flutter, covering POS, checkout, SDK, and merchant-facing payment experiences.",
+        "Led the development of DigiPOS and related in-store payment journeys supporting Card, UPI, Payment Links, dynamic QR, EMI, and device-assisted checkout workflows.",
+        "Engineered payment systems and mobile experiences focused on transaction reliability, conversion, performance, and production-grade scalability in high-volume fintech environments.",
+        "Worked extensively across native apps and SDK layers, enabling secure integrations, seamless checkout journeys, and reusable platform capabilities for merchants and partners."
+      ],
+    },
+    {
+      company: "Aujas Cybersecurity",
+      role: "Software Engineer",
+      period: "May 2018 — Dec 2020",
+      points: [
+        "Developed Android-native solutions for enterprise and security-focused products with emphasis on reliability, secure implementation, and production readiness.",
+        "Built a strong foundation in mobile architecture, app performance, debugging, and disciplined delivery while working on cybersecurity-oriented client requirements.",
+        "Contributed to security-conscious mobile workflows involving device posture, privacy-aware engineering, and user-facing protection experiences."
+      ],
+    }
+
+  ];
 
 const achievements = [
   "Built production-grade fintech, SDK, AI, and enterprise mobile applications.",
@@ -1043,6 +1070,7 @@ export default function App() {
 
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   });
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -1056,11 +1084,24 @@ export default function App() {
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 480);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   const stats = useMemo(
     () => [
       { label: "Years Experience", value: profile.years },
-      { label: "Platforms", value: "iOS • Android • Flutter" },
-      { label: "Focus", value: "SDKs • Fintech • AI Apps" },
+      { label: "Platforms", value: "iOS\nAndroid\nFlutter" },
+      { label: "Focus", value: "AI Apps , SDKs , Fintech" },
     ],
     []
   );
@@ -1206,7 +1247,7 @@ export default function App() {
 
         <section id="experience" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <ScrollReveal>
-            <SectionHeading eyebrow="Experience Timeline" title="A journey across enterprise, security, and high-scale mobile products." description="From early Android engineering to leading mobile initiatives in Bangalore across fintech and AI-enabled systems, with strong ownership and execution throughout." />
+            <SectionHeading eyebrow="Experience Timeline" title="A journey across enterprise, security, and high-scale mobile products." description="From early engineering to leading mobile initiatives in Bangalore across fintech and AI-enabled systems, with strong ownership and execution throughout." />
           </ScrollReveal>
           <ScrollStagger className="mt-12 space-y-8">{experience.map((item, index) => <TimelineItem key={item.company} item={item} isLast={index === experience.length - 1} />)}</ScrollStagger>
         </section>
@@ -1323,6 +1364,18 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {showScrollTop ? (
+        <button
+          type="button"
+          aria-label="Scroll to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-zinc-200/80 bg-white/90 px-4 py-3 text-sm font-medium text-zinc-900 shadow-[0_16px_40px_rgba(0,0,0,0.12)] backdrop-blur-xl transition hover:-translate-y-1 dark:border-white/10 dark:bg-[#11131a]/85 dark:text-white"
+        >
+          <ArrowUp className="h-4 w-4" />
+          Top
+        </button>
+      ) : null}
     </div>
   );
 }
