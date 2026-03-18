@@ -31,7 +31,8 @@ type Project = {
   type: string;
   description: string;
   tech: ProjectTech;
-  images: string[];
+  images?: string[];
+  highlights?: string[];
   links: ProjectLink[];
   accent: string;
 };
@@ -135,6 +136,16 @@ const screenshotSets = {
     "/screenshots/turbo-2.svg",
     "/screenshots/turbo-3.svg",
   ],
+  posService: [
+    "/screenshots/pos-service-1.svg",
+    "/screenshots/pos-service-2.svg",
+    "/screenshots/pos-service-3.svg",
+  ],
+  fieldpro: [
+    "/screenshots/fieldpro-1.svg",
+    "/screenshots/fieldpro-2.svg",
+    "/screenshots/fieldpro-3.svg",
+  ],
   whitehax: [
     "/screenshots/whitehax-1.svg",
     "/screenshots/whitehax-2.svg",
@@ -222,28 +233,231 @@ const projects: Project[] = [
   },
 
   {
-    name: "Turbo UPI SDK",
-    type: "Mobile SDK",
+    name: "Razorpay POS Service",
+    type: "Fintech / POS app",
     description:
-      "Cross-platform payments SDK enabling in-app UPI acceptance with improved payment success rate, smoother checkout journeys, and reusable integration patterns.",
-    tech: ["Flutter", "SDK", "Payments", "API Integration", "Performance"],
-    images: screenshotSets.turbo,
+      "Razorpay POS Service is a native Android payments integration platform built to bring Razorpay’s POS capabilities directly into merchant business apps. Created for integrated enterprise and retail use cases, the product enables store staff and delivery agents to collect payments through their existing operational workflows while supporting a broad range of modes including Cards, UPI, QR Code, SMS Pay Links, Bank EMI, Brand EMI, wallets, cash, and cheque. The app is designed to operate both independently and alongside POS hardware, with fast device connectivity over Bluetooth or Wi-Fi, enabling flexible payment collection across retail counters, on-floor operations, and field environments. Built for production-scale reliability, the platform emphasizes secure integration, configurable payment journeys, session management, Android-native performance, stability, and smooth transaction execution in business-critical scenarios. I helped engineer a robust Android-native experience focused on scalable payment workflows, reliability, device integration, and seamless usability for high-impact merchant operations.",
+    tech: {
+      core: [
+        "Android Native",
+        "Kotlin",
+        "Java",
+        "MVVM",
+        "Android SDK"
+      ],
+      payments: [
+        "Card Payments",
+        "UPI",
+        "QR Code Payments",
+        "SMS Pay Links",
+        "Bank EMI",
+        "Brand EMI",
+        "Wallet Payments",
+        "Cash Flows"
+      ],
+      integrations: [
+        "Business App Integration",
+        "Backend-Driven Integration",
+        "POS Hardware Integration",
+        "Bluetooth Connectivity",
+        "Wi-Fi Connectivity"
+      ],
+      product: [
+        "Merchant Payment Workflows",
+        "Store Staff Payments",
+        "Delivery Agent Collections",
+        "Configurable Payment Modes",
+        "Enterprise POS Solutions"
+      ],
+      engineering: [
+        "Session Management",
+        "Android 14 Support",
+        "Performance Optimization",
+        "App Stability",
+        "Production-Grade Reliability",
+        "Secure Payment Orchestration"
+      ]
+    },
+
+    images: screenshotSets.posService,
     links: [
-      { label: "GitHub", href: "#", icon: Github },
-      { label: "Pub.dev", href: "#", icon: ExternalLink },
+      { label: "Play Store", href: "https://play.google.com/store/apps/details?id=com.ezetap.service.rzp&hl=en_IN", icon: Play },
+      {
+        label: "LinkedIn Feature",
+        href: "https://www.linkedin.com/posts/razorpay-pos-payments_razorpay-pos-self-healing-activity-7417504470848233472-jb7b?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIBC1YBLz32p-XAvwQbZVq1C_M6m9VMm_Q",
+        icon: ExternalLink,
+      },
     ],
     accent: "from-amber-500/25 via-orange-500/10 to-rose-500/20",
   },
+
   {
-    name: "WhiteHaX / SafePass",
-    type: "Mobile security apps",
+    name: "Razorpay Turbo",
+    type: "Flutter payments SDK / plugin",
     description:
-      "Security-focused enterprise applications for cyber-readiness, phishing awareness, and device and user risk analysis with robust architecture and app hardening.",
-    tech: ["Android", "Flutter", "Security", "Enterprise", "Compose"],
-    images: screenshotSets.whitehax,
-    links: [{ label: "Project Details", href: "#", icon: ExternalLink }],
-    accent: "from-slate-500/30 via-zinc-500/10 to-neutral-500/20",
+      "Razorpay Turbo is a cross-platform Flutter payments SDK built to bring Razorpay’s native checkout experience into Flutter applications across Android, iOS, and web. Designed as a wrapper over Razorpay’s underlying native SDKs, it enables teams to integrate secure and scalable payment flows with a single Flutter-facing interface while still leveraging platform-native checkout capabilities. The SDK supports event-driven payment handling for success, failure, and external wallet flows, and is built to work with server-generated order creation for secure payment processing and request integrity. It also provides configurable checkout options such as prefill data, branding, theme customization, timeout handling, and payment method configuration to help improve conversion and reduce checkout friction. From an engineering standpoint, the work involved building and maintaining a clean Flutter plugin layer over native platforms, ensuring smooth bridge communication, platform compatibility, stable callback handling, and production-grade developer experience for merchants integrating Razorpay checkout into their apps. This project reflects strong expertise in SDK development, cross-platform architecture, payment orchestration, native bridge design, and developer-focused product engineering.",
+    tech: {
+      core: [
+        "Flutter Plugin Development",
+        "Dart",
+        "Android",
+        "iOS",
+
+      ],
+      sdkArchitecture: [
+        "Native SDK Wrapper",
+        "Platform Channels / Bridge Layer",
+        "Cross-Platform SDK Design",
+        "Event-Driven Integration",
+        "Developer-Focused API Design"
+      ],
+      payments: [
+        "Razorpay Checkout",
+        "Orders API Integration",
+        "Payment Success / Failure Callbacks",
+        "External Wallet Handling",
+        "Secure Payment Processing"
+      ],
+      checkoutExperience: [
+        "Prefill Configuration",
+        "Checkout Customization",
+        "Theme & Branding",
+        "Payment Method Configuration",
+        "Timeout Handling"
+      ],
+      engineering: [
+        "SDK Architecture",
+        "Native-Flutter Interoperability",
+        "Platform Compatibility",
+        "Production-Grade Reliability",
+        "Integration Experience Optimization"
+      ]
+    },
+    // highlights: [
+    //   "Built as a Flutter wrapper over Razorpay’s native Android and iOS SDKs",
+    //   "Supports Android, iOS, and web targets",
+    //   "Uses event-based communication for payment success, failure, and external wallet flows",
+    //   "Supports secure server-side order creation and order_id-based checkout flows",
+    //   "Allows checkout customization through prefill, theme, and configuration options"
+    // ],
+    images: screenshotSets.turbo,
+    links: [
+      { label: "pub.dev", href: "https://pub.dev/packages/razorpay_turbo", icon: ExternalLink },
+      { label: "Official Docs", href: "https://razorpay.com/docs/payments/payment-gateway/flutter-integration/standard/integration-steps/", icon: ExternalLink }
+    ],
+    accent: "from-sky-500/25 via-blue-500/10 to-indigo-500/20"
   },
+  {
+    name: "AiDash IVMS FieldPro",
+    type: "Enterprise field operations / native iOS app",
+    description:
+      "AiDash IVMS FieldPro is a production-grade native iOS application built for utility field crews and managers to streamline vegetation-risk operations around geographically distributed assets. The app enables users to report vegetation risks, execute trimming and tree-removal workflows, and manage hazardous trees and grow-ins through secure, highly defined field workflows designed for distributed teams. Built for real-world field conditions, the product emphasizes structured execution, operational reliability, offline usability, and map-driven decision support to help crews work effectively across remote environments. Recent product enhancements introduced Hazard Tree Management workflows, expanded offline access with up to 4x more downloadable map and data coverage, richer map layers, and more contextual field information in cards and detail views for faster on-site decision-making. I contributed to building a robust native iOS experience focused on scalable field workflows, offline-first usability, map-based interfaces, performance, and dependable execution in enterprise utility operations.",
+    tech: {
+      core: [
+        "iOS Native",
+        "Swift",
+        "UIKit",
+        "iPhone",
+        "iPad"
+      ],
+      product: [
+        "Vegetation Risk Management",
+        "Hazard Tree Management",
+        "Tree Trimming Workflows",
+        "Tree Removal Operations",
+        "Utility Field Operations"
+      ],
+      mappingAndOffline: [
+        "Offline Maps",
+        "Offline Data Access",
+        "Map Layers",
+        "Geospatial Context",
+        "Field Data Capture"
+      ],
+      workflow: [
+        "Secure Access",
+        "Role-Based Workflows",
+        "Distributed Crew Collaboration",
+        "Work Execution Flows",
+        "Decision Support Views"
+      ],
+      engineering: [
+        "Enterprise Mobility",
+        "Production-Grade Reliability",
+        "Performance Optimization",
+        "Scalable Workflow Architecture",
+        "Field-Ready UX"
+      ]
+    },
+    highlights: [
+      "Built for utility organizations managing vegetation risks around distributed assets",
+      "Supports reporting, trimming, tree removal, and hazardous tree workflows",
+      "Improved offline field usability with up to 4x more downloadable map and data coverage",
+      "Added richer map layers and more contextual information for faster decision-making",
+      "Designed for secure collaboration across geographically distributed field crews"
+    ],
+    images: screenshotSets.fieldpro,
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/in/app/aidash-ivms-fieldpro/id6475400606", icon: Store }
+    ],
+    accent: "from-emerald-500/25 via-lime-500/10 to-teal-500/20"
+  },
+  {
+    name: "WhiteHaX CyberSafe",
+    type: "Cybersecurity / Android native app",
+    description:
+      "WhiteHaX CyberSafe is a production-grade native Android cybersecurity application built to help users assess and strengthen the security posture of their mobile devices. The product is designed as a cloud-managed mobile security platform that evaluates device cyber-readiness by analyzing operating system settings, application security configurations, privacy posture, and network-level exposure across a range of threat scenarios. It provides a holistic approach to mobile protection by combining device verification, network security analysis, phishing and malware risk detection, privacy-focused safeguards, and guided insights that help users take corrective action. The platform also supports capabilities such as on-demand Wi-Fi security validation, VPN-backed protection, and broader household device security visibility, making it valuable for both personal and consumer cyber-protection use cases. Built for real-world reliability, the app demanded strong focus on Android-native performance, secure data handling, cloud-connected threat intelligence, stable diagnostics, intuitive risk presentation, and smooth user experience across varied device conditions. I contributed to building a scalable Android-native security product centered on cyber-readiness assessment, privacy-first design, network protection, and dependable end-user mobile security workflows.",
+    tech: {
+      core: [
+        "Android Native",
+        "Kotlin",
+        "Java",
+        "Android SDK",
+        "Cloud-Managed Mobile Security"
+      ],
+      security: [
+        "Device Security Assessment",
+        "OS & App Configuration Analysis",
+        "Privacy Risk Detection",
+        "Threat Intelligence",
+        "Phishing & Malware Protection"
+      ],
+      network: [
+        "Wi-Fi Security Validation",
+        "Network Risk Analysis",
+        "VPN Integration",
+        "Connected Device Security",
+        "Secure Connectivity"
+      ],
+      product: [
+        "Cyber-Readiness Verification",
+        "Guided Security Insights",
+        "Risk Scoring",
+        "Consumer Cyber Protection",
+        "Multi-Device Monitoring"
+      ],
+      engineering: [
+        "Secure Data Handling",
+        "Performance Optimization",
+        "Cloud Connectivity",
+        "App Stability",
+        "Production-Grade Reliability"
+      ]
+    },
+    highlights: [
+      "Cloud-managed Android app for mobile device cyber-readiness verification",
+      "Analyzes device, OS, app settings, and network posture against multiple threat scenarios",
+      "Supports on-demand Wi-Fi security checks and VPN-backed protection",
+      "Uses threat intelligence to help defend against phishing, malware, and related cyber risks",
+      "Designed for holistic mobile security and data privacy workflows"
+    ],
+    images: screenshotSets.whitehax,
+    links: [
+      { label: "Play Store", href: "https://play.google.com/store/apps/details?id=com.whitehax.mobile&hl=en_IN", icon: Play }
+    ],
+    accent: "from-red-500/25 via-orange-500/10 to-yellow-500/20"
+  }
+
 ];
 
 const experience: ExperienceItem[] = [
@@ -702,11 +916,29 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        <ScreenshotCarousel images={project.images} name={project.name} />
+        {project.images?.length ? <ScreenshotCarousel images={project.images} name={project.name} /> : null}
 
         <p className="mt-6 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
           {project.description}
         </p>
+
+        {project.highlights?.length ? (
+          <div className="mt-6">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
+              Highlights
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {project.highlights.map((highlight) => (
+                <div
+                  key={highlight}
+                  className="rounded-2xl border border-zinc-200/80 bg-white/70 px-4 py-3 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300"
+                >
+                  {highlight}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="mt-5 grid gap-4">
           {techGroups.map((group) => (
@@ -967,7 +1199,7 @@ export default function App() {
 
         <section id="projects" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <ScrollReveal>
-            <SectionHeading eyebrow="Featured Projects" title="Real mobile app screenshots with animated iPhone mockups." description="A showcase of AI-powered, fintech, SDK, and enterprise mobile work across Flutter, iOS, and Android." />
+            <SectionHeading eyebrow="Featured Projects" title="Built for Production" description="A showcase of AI-powered, fintech, SDK, and enterprise mobile work across Flutter, iOS, and Android." />
           </ScrollReveal>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} variants={staggerIn} className="mt-12 grid gap-6 xl:grid-cols-2">{projects.map((project) => <ProjectCard key={project.name} project={project} />)}</motion.div>
         </section>
