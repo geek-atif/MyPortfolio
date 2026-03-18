@@ -1160,7 +1160,7 @@ export default function App() {
         <section id="about" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <ScrollReveal>
-              <SectionHeading eyebrow="About Me" title="Senior mobile product engineer with a systems mindset." description="I build AI-enabled applications and SDKs that balance product quality, engineering rigor, and business outcomes. My work from Bangalore spans native iOS, Android, and Flutter with a strong focus on maintainable architecture, developer experience, and high-performance execution." />
+              <SectionHeading eyebrow="About Me" title="Senior mobile engineer with a systems mindset." description="I build AI-enabled applications and SDKs that balance product quality, engineering rigor, and business outcomes. My work from Bangalore spans native iOS, Android, and Flutter with a strong focus on maintainable architecture, developer experience, and high-performance execution." />
             </ScrollReveal>
             <ScrollStagger className="grid gap-6 md:grid-cols-2">
               {[

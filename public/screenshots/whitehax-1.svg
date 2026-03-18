@@ -1,19 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="50%" stop-color="#312e81"/>
-      <stop offset="100%" stop-color="#0ea5e9"/>
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="50%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#ea580c"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="800" fill="url(#bg)" rx="40"/>
-  <circle cx="980" cy="140" r="120" fill="#ffffff22"/>
-  <circle cx="180" cy="680" r="160" fill="#ffffff18"/>
-  <rect x="90" y="110" width="1020" height="580" rx="34" fill="#ffffff14" stroke="#ffffff22"/>
-  <text x="120" y="220" fill="white" font-size="42" font-family="Arial, sans-serif" font-weight="700">WhiteHaX / SafePass</text>
-  <text x="120" y="290" fill="#d4d4d8" font-size="28" font-family="Arial, sans-serif">Modern Mobile Product Experience</text>
-  <rect x="120" y="360" width="420" height="220" rx="28" fill="#ffffff18" stroke="#ffffff22"/>
-  <rect x="590" y="330" width="160" height="300" rx="30" fill="#020617" stroke="#94a3b8"/>
-  <rect x="608" y="360" width="124" height="240" rx="22" fill="#e2e8f0"/>
-  <text x="120" y="650" fill="#e4e4e7" font-size="22" font-family="Arial, sans-serif">Portfolio showcase placeholder</text>
+  <rect width="1200" height="800" rx="40" fill="url(#bg)"/>
+  <rect x="88" y="96" width="1024" height="608" rx="38" fill="#ffffff10" stroke="#ffffff22"/>
+  <text x="126" y="186" fill="#ffffff" font-size="42" font-family="Arial, sans-serif" font-weight="700">WhiteHaX CyberSafe</text>
+  <text x="126" y="232" fill="#ffedd5" font-size="24" font-family="Arial, sans-serif">Android-native cyber-readiness, privacy, and risk defense</text>
+  <rect x="126" y="292" width="390" height="286" rx="28" fill="#ffffff12" stroke="#ffffff1d"/>
+  <text x="156" y="344" fill="#ffffff" font-size="24" font-family="Arial, sans-serif" font-weight="700">Security Surface</text>
+  <text x="156" y="390" fill="#ffedd5" font-size="20" font-family="Arial, sans-serif">Device posture and app settings</text>
+  <text x="156" y="424" fill="#ffedd5" font-size="20" font-family="Arial, sans-serif">Privacy and phishing analysis</text>
+  <text x="156" y="458" fill="#ffedd5" font-size="20" font-family="Arial, sans-serif">Network and threat intelligence</text>
+  <rect x="606" y="244" width="220" height="422" rx="34" fill="#1f2937" stroke="#fdba74"/>
+  <rect x="626" y="276" width="180" height="356" rx="24" fill="#fff7ed"/>
+  <path d="M716 344 L770 372 L750 470 C741 500 724 525 716 530 C708 525 691 500 682 470 L662 372 Z" fill="#f97316"/>
+  <rect x="654" y="486" width="124" height="20" rx="10" fill="#fdba74"/>
+  <rect x="654" y="522" width="124" height="20" rx="10" fill="#fdba74"/>
+  <rect x="876" y="320" width="176" height="118" rx="24" fill="#ffffff12" stroke="#ffffff20"/>
+  <text x="904" y="366" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="700">Wi-Fi Check</text>
+  <text x="904" y="402" fill="#ffedd5" font-size="18" font-family="Arial, sans-serif">On-demand security</text>
+  <rect x="876" y="470" width="176" height="118" rx="24" fill="#ffffff12" stroke="#ffffff20"/>
+  <text x="904" y="516" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="700">VPN Guard</text>
+  <text x="904" y="552" fill="#ffedd5" font-size="18" font-family="Arial, sans-serif">Connected protection</text>
 </svg>
