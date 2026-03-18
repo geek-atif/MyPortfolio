@@ -1141,7 +1141,7 @@ export default function App() {
       <main id="top" className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8 lg:pb-28 lg:pt-20">
           <div className="grid items-start gap-16 lg:grid-cols-[1.02fr_0.98fr]">
-            <motion.div initial="hidden" animate="visible" transition={{ duration: 0.7, staggerChildren: 0.12 }} className="max-w-3xl">
+            <motion.div initial="hidden" animate="visible" transition={{ duration: 0.7, staggerChildren: 0.12 }} className="order-2 max-w-3xl lg:order-1">
               <motion.div variants={fadeUp} className="mb-5 inline-flex rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-zinc-500 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
                 Senior Mobile Engineer • Bangalore • iOS • Android • Flutter • AI
               </motion.div>
@@ -1166,7 +1166,7 @@ export default function App() {
               </motion.div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative">
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="order-1 relative lg:order-2">
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-violet-500/20 blur-3xl" />
               <div className="absolute -bottom-6 -left-8 h-28 w-28 rounded-full bg-sky-500/20 blur-3xl" />
               <div className="relative overflow-hidden rounded-[40px] border border-zinc-200/70 bg-white/55 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.08)] backdrop-blur-2xl dark:border-white/10 dark:bg-white/5">
