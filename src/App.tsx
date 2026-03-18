@@ -1126,7 +1126,7 @@ export default function App() {
             <a href="#contact" className="hover:text-zinc-950 dark:hover:text-white">Contact</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href={profile.resume} {...getExternalLinkProps(profile.resume)} className="hidden rounded-full border border-zinc-200 bg-white/90 px-4 py-2 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white md:inline-flex">Resume</a>
+            {/* <a href={profile.resume} {...getExternalLinkProps(profile.resume)} className="hidden rounded-full border border-zinc-200 bg-white/90 px-4 py-2 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white md:inline-flex">Resume</a> */}
             <button
               aria-label="Toggle theme"
               onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
@@ -1154,7 +1154,7 @@ export default function App() {
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 dark:bg-white dark:text-zinc-950">View Projects <ArrowRight className="h-4 w-4" /></a>
                 <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/90 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white">Contact Me</a>
-                <a href={profile.resume} {...getExternalLinkProps(profile.resume)} className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/90 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white">Download Resume <Download className="h-4 w-4" /></a>
+                {/* <a href={profile.resume} {...getExternalLinkProps(profile.resume)} className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/90 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white">Download Resume <Download className="h-4 w-4" /></a> */}
               </motion.div>
               <motion.div variants={fadeUp} className="mt-10 grid gap-4 sm:grid-cols-3">
                 {stats.map((stat) => (
