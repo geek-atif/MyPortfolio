@@ -25,11 +25,12 @@ import {
 
 type Skill = { category: string; items: string[] };
 type ProjectLink = { label: string; href: string; icon: React.ComponentType<{ className?: string }> };
+type ProjectTech = string[] | Record<string, string[]>;
 type Project = {
   name: string;
   type: string;
   description: string;
-  tech: string[];
+  tech: ProjectTech;
   images: string[];
   links: ProjectLink[];
   accent: string;
@@ -72,7 +73,7 @@ const profile = {
   years: "7+",
   location: "Bangalore, India",
   summary:
-    "Senior Software Engineer (SDE-3) based in Bangalore, India with 7+ years of experience designing and scaling AI-powered mobile applications across iOS, Android, and Flutter. Strong background in fintech, SDK development, enterprise mobility, performance optimization, and architecture-first product engineering.",
+    "Senior Software Engineer (SDE-3) based in Bangalore, India with 7+ years of experience engineering and scaling AI-powered mobile applications across iOS, Android, and Flutter. Expertise in end-to-end app development, architecture design, performance optimization, SDK development, and crafting product-driven experiences that are scalable, reliable, and built with precision.",
 };
 
 const skills: Skill[] = [
@@ -111,11 +112,11 @@ const techStack = [
   { label: "Java" },
   { label: "SwiftUI" },
   { label: "Swift" },
-  { label: "UIKit" },
-  { label: "Jetpack Compose" },
-  { label: "Firebase" },
-  { label: "REST APIs" },
-  { label: "Clean Architecture" },
+  // { label: "UIKit" },
+  // { label: "Jetpack Compose" },
+  // { label: "Firebase" },
+  // { label: "REST APIs" },
+  // { label: "Clean Architecture" },
 ];
 
 const screenshotSets = {
@@ -143,33 +144,83 @@ const screenshotSets = {
 
 const projects: Project[] = [
   {
+    name: "Razorpay DigiPOS",
+    type: "Fintech / POS app",
+    description:
+      "Razorpay DigiPOS is a production-grade native iOS point-of-sale application built for Apple Premium Reseller stores to transform the in-store checkout experience using iPhone and iPad. The app enables store staff to accept Card payments, UPI, Payment Links, dynamic QR payments, No-Cost EMI, Exchange flows, Apple Forward Trade-In, and AppleCare purchase journeys directly from the shop floor, removing the need for traditional fixed checkout counters and making the payment experience faster, more flexible, and more customer-friendly. Built as a high-performance, business-critical payments product, DigiPOS focused heavily on reliability, seamless transaction handling, intuitive user experience, and efficient store operations across real-world retail environments. I contributed to building a robust native iOS experience with strong attention to architecture, performance optimization, device integrations, and scalable payment workflows, helping create a smooth end-to-end solution for modern in-store commerce. The product played a key role in improving transaction throughput, reducing checkout friction, empowering staff mobility, and contributing to 10x growth in GMV through a more seamless and conversion-focused payment journey.",
+    tech: {
+      core: [
+        "iOS",
+        "Swift",
+        "SwiftUI",
+        "VIPER"
+      ],
+      payments: [
+        "Card Payments",
+        "UPI Payments",
+        "Payment Links",
+        "Dynamic QR Payments",
+        "No-Cost EMI"
+      ],
+      commerce: [
+        "Apple Forward Trade-In",
+        "AppleCare Integration",
+        "Exchange Flow",
+        "In-Store Checkout",
+        "POS Workflows"
+      ],
+      deviceIntegrations: [
+        "D180 POS Device Integration",
+        "External Payment Hardware",
+        "Device Pairing",
+        "Transaction Processing"
+      ],
+      engineering: [
+        "Performance Optimization",
+        "Scalable Architecture",
+        "Enterprise Mobility",
+        "Production-Grade Reliability",
+        "Native iOS Development"
+      ]
+    },
+    images: screenshotSets.digipos,
+    links: [
+      { label: "App Store", href: "https://apps.apple.com/in/app/razorpay-digipos/id6520383285", icon: Store },
+      {
+        label: "LinkedIn Feature",
+        href: "https://www.linkedin.com/posts/razorpay_razorpayatgff-globalfintechfest-activity-7234492976322818052-Z1-S?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIBC1YBLz32p-XAvwQbZVq1C_M6m9VMm_Q",
+        icon: ExternalLink,
+      },
+      {
+        label: "LinkedIn Demo",
+        href: "https://www.linkedin.com/posts/ndtvprofit_razorpay-coo-rahul-kothari-demonstrates-payment-activity-7234613464009236480-U5Cq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABIBC1YBLz32p-XAvwQbZVq1C_M6m9VMm_Q",
+        icon: ExternalLink,
+      },
+    ],
+    accent: "from-emerald-500/25 via-cyan-500/10 to-blue-500/20",
+  },
+  {
     name: "Pukaar AI",
     type: "AI-powered mobile app",
     description:
       "As seen on Shark Tank India, Pukaar AI is an AI baby care and health tracking app built to help parents feel calmer, more informed, and more confident through the early stages of parenting. The app combines baby cry analysis, everyday parenting guidance, growth-stage support, and practical newborn care insights so families can better understand feeding, sleep, routines, development milestones, and common discomfort signals. It also brings together digital parenting support with expert-backed direction from pediatricians, lactation consultants, nutritionists, and sleep specialists, creating a more reassuring and structured experience for first-time parents navigating real day-to-day baby care.",
-    tech: ["Flutter", "Clean Architecture", "AI APIs", "BLoC", "REST"],
+    tech: {
+      core: ["Flutter", "Dart", "Clean Architecture", "BLoC"],
+      analytics: ["Mixpanel Analytics", "Facebook App Events", "Microsoft Clarity", "AppsFlyer Attribution"],
+      engagement: ["OneSignal Push Notifications", "App Tracking Transparency"],
+      payments: ["In-App Purchases", "StoreKit Integration", "Razorpay Payment Gateway"],
+      features: ["Sign in with Apple", "Video Player Integration"],
+      engineering: ["Performance Optimization", "Cross-Platform Development"]
+    },
     images: screenshotSets.pukaar,
     links: [
-      { label: "Case Study", href: "#", icon: ExternalLink },
+      //{ label: "Case Study", href: "#", icon: ExternalLink },
       { label: "App Store", href: "https://apps.apple.com/in/app/pukaar-ai/id6755088190", icon: Store },
       { label: "Play Store", href: "https://play.google.com/store/apps/details?id=com.prakarann.goonj&hl=en_IN", icon: Play },
     ],
     accent: "from-violet-500/25 via-fuchsia-500/10 to-sky-500/20",
   },
-  {
-    name: "DigiPOS",
-    type: "Fintech / POS app",
-    description:
-      "Production-grade mobile payment application supporting Card, UPI, Payment Links, and EMI flows with strong UX, reliability, and business impact.",
-    tech: ["iOS", "Android", "SwiftUI", "Kotlin", "MVVM"],
-    images: screenshotSets.digipos,
-    links: [
-      { label: "Overview", href: "#", icon: ExternalLink },
-      { label: "App Store", href: "#", icon: Store },
-      { label: "Play Store", href: "#", icon: Play },
-    ],
-    accent: "from-emerald-500/25 via-cyan-500/10 to-blue-500/20",
-  },
+
   {
     name: "Turbo UPI SDK",
     type: "Mobile SDK",
@@ -621,6 +672,13 @@ function GitHubShowcase() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const techGroups = Array.isArray(project.tech)
+    ? [{ label: "Tech", items: project.tech }]
+    : Object.entries(project.tech).map(([label, items]) => ({
+      label: label.charAt(0).toUpperCase() + label.slice(1),
+      items,
+    }));
+
   return (
     <motion.div
       variants={fadeUp}
@@ -650,14 +708,23 @@ function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.tech.map((item) => (
-            <span
-              key={item}
-              className="rounded-full border border-zinc-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300"
-            >
-              {item}
-            </span>
+        <div className="mt-5 grid gap-4">
+          {techGroups.map((group) => (
+            <div key={group.label}>
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
+                {group.label}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={`${group.label}-${item}`}
+                    className="rounded-full border border-zinc-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
@@ -800,13 +867,13 @@ export default function App() {
 
       <main id="top" className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8 lg:pb-28 lg:pt-20">
-          <div className="grid items-center gap-16 lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="grid items-start gap-16 lg:grid-cols-[1.02fr_0.98fr]">
             <motion.div initial="hidden" animate="visible" transition={{ duration: 0.7, staggerChildren: 0.12 }} className="max-w-3xl">
-              <motion.div variants={fadeUp} className="mb-6 inline-flex rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-zinc-500 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
+              <motion.div variants={fadeUp} className="mb-5 inline-flex rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.24em] text-zinc-500 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-zinc-400">
                 Senior Mobile Engineer • Bangalore • iOS • Android • Flutter • AI
               </motion.div>
               <motion.h1 variants={fadeUp} className="text-5xl font-semibold tracking-[-0.05em] text-zinc-950 dark:text-white sm:text-6xl lg:text-7xl">
-                Apple-style mobile portfolio with premium product thinking.
+                Precision in code. Taste in product.
               </motion.h1>
               <motion.p variants={fadeUp} className="mt-6 max-w-2xl text-base leading-8 text-zinc-600 dark:text-zinc-400 md:text-lg">
                 {profile.tagline}
@@ -834,7 +901,7 @@ export default function App() {
                 <div className="relative flex flex-col items-center text-center">
                   <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut" }} className="relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500/30 via-sky-500/20 to-emerald-500/20 blur-2xl" />
-                    <div className="relative h-64 w-64 overflow-hidden rounded-full border border-white/50 p-2 shadow-2xl backdrop-blur-xl dark:border-white/10 md:h-72 md:w-72">
+                    <div className="relative h-70 w-70 overflow-hidden rounded-full border border-white/50 p-2 shadow-2xl backdrop-blur-xl dark:border-white/10 md:h-72 md:w-72">
                       <img src="/profile.jpg" alt="Atif Qamar profile" className="h-full w-full rounded-full object-cover" />
                     </div>
                   </motion.div>
@@ -967,48 +1034,48 @@ export default function App() {
         <section id="contact" className="mx-auto max-w-7xl px-6 pb-24 pt-24 lg:px-8">
           <ScrollReveal>
             <div className="overflow-hidden rounded-[36px] border border-zinc-200/70 bg-gradient-to-br from-zinc-950 to-zinc-800 p-8 text-white shadow-[0_20px_80px_rgba(0,0,0,0.16)] dark:border-white/10 md:p-10 lg:p-12">
-            <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-              <div>
-                <div className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-zinc-300">Contact</div>
-                <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Let’s build the next great mobile product.</h2>
-                <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-300">Available from Bangalore for product engineering, senior mobile roles, architecture consulting, SDK work, AI app development, and high-quality delivery across iOS, Android, and Flutter.</p>
-              </div>
-              <div className="grid gap-4">
-                {contactItems.map((item) => (
-                  <div key={item.label} className="flex items-center justify-between rounded-[24px] border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
-                    <div className="flex items-center gap-4">
-                      <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/10"><item.icon className="h-5 w-5" /></div>
-                      <div>
-                        <p className="text-sm text-zinc-400">{item.label}</p>
-                        {"values" in item ? (
-                          <div className="mt-1 flex flex-wrap gap-3">
-                            {item.values.map((value) => (
-                              <a
-                                key={value.href}
-                                href={value.href}
-                                {...getExternalLinkProps(value.href)}
-                                className="text-sm font-medium text-white transition hover:text-zinc-300"
-                              >
-                                {value.label}
-                              </a>
-                            ))}
-                          </div>
-                        ) : (
-                          <a
-                            href={item.href}
-                            {...getExternalLinkProps(item.href)}
-                            className="text-sm font-medium text-white transition hover:text-zinc-300"
-                          >
-                            {item.value}
-                          </a>
-                        )}
+              <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+                <div>
+                  <div className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-zinc-300">Contact</div>
+                  <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">Let’s build the next great mobile product.</h2>
+                  <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-300">Available from Bangalore for product engineering, senior mobile roles, architecture consulting, SDK work, AI app development, and high-quality delivery across iOS, Android, and Flutter.</p>
+                </div>
+                <div className="grid gap-4">
+                  {contactItems.map((item) => (
+                    <div key={item.label} className="flex items-center justify-between rounded-[24px] border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
+                      <div className="flex items-center gap-4">
+                        <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/10"><item.icon className="h-5 w-5" /></div>
+                        <div>
+                          <p className="text-sm text-zinc-400">{item.label}</p>
+                          {"values" in item ? (
+                            <div className="mt-1 flex flex-wrap gap-3">
+                              {item.values.map((value) => (
+                                <a
+                                  key={value.href}
+                                  href={value.href}
+                                  {...getExternalLinkProps(value.href)}
+                                  className="text-sm font-medium text-white transition hover:text-zinc-300"
+                                >
+                                  {value.label}
+                                </a>
+                              ))}
+                            </div>
+                          ) : (
+                            <a
+                              href={item.href}
+                              {...getExternalLinkProps(item.href)}
+                              className="text-sm font-medium text-white transition hover:text-zinc-300"
+                            >
+                              {item.value}
+                            </a>
+                          )}
+                        </div>
                       </div>
+                      {"href" in item && <ExternalLink className="h-4 w-4 text-zinc-400" />}
                     </div>
-                    {"href" in item && <ExternalLink className="h-4 w-4 text-zinc-400" />}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
             </div>
           </ScrollReveal>
         </section>
