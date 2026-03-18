@@ -3,10 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://geek-atif.github.io/MyPortfolio/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^11.3.19",
@@ -19,6 +21,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.5.4",
