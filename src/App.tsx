@@ -60,6 +60,8 @@ type Repo = {
   fork?: boolean;
 };
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 const profile = {
   name: "Atif Qamar",
   title: "Senior Mobile Engineer / Ex-Razorpay",
@@ -71,7 +73,7 @@ const profile = {
   github: "https://github.com/geek-atif",
   medium: "https://medium.com/@atifqamar29",
   recommendations: "https://www.linkedin.com/in/atif-qamar-3321aa85/details/recommendations/?detailScreenTabIndex=0",
-  resume: "/Atif_Qamar_Flutter.pdf",
+  resume: assetPath("/Atif_Qamar_Flutter.pdf"),
   years: "7+",
   location: "Bangalore, India",
   summary:
@@ -123,34 +125,34 @@ const techStack = [
 
 const screenshotSets = {
   pukaar: [
-    "/screenshots/pukaar-1.svg",
-    "/screenshots/pukaar-2.svg",
-    "/screenshots/pukaar-3.svg",
+    assetPath("/screenshots/pukaar-1.svg"),
+    assetPath("/screenshots/pukaar-2.svg"),
+    assetPath("/screenshots/pukaar-3.svg"),
   ],
   digipos: [
-    "/screenshots/digipos-1.svg",
-    "/screenshots/digipos-2.svg",
-    "/screenshots/digipos-3.svg",
+    assetPath("/screenshots/digipos-1.svg"),
+    assetPath("/screenshots/digipos-2.svg"),
+    assetPath("/screenshots/digipos-3.svg"),
   ],
   turbo: [
-    "/screenshots/turbo-1.svg",
-    "/screenshots/turbo-2.svg",
-    "/screenshots/turbo-3.svg",
+    assetPath("/screenshots/turbo-1.svg"),
+    assetPath("/screenshots/turbo-2.svg"),
+    assetPath("/screenshots/turbo-3.svg"),
   ],
   posService: [
-    "/screenshots/pos-service-1.svg",
-    "/screenshots/pos-service-2.svg",
-    "/screenshots/pos-service-3.svg",
+    assetPath("/screenshots/pos-service-1.svg"),
+    assetPath("/screenshots/pos-service-2.svg"),
+    assetPath("/screenshots/pos-service-3.svg"),
   ],
   fieldpro: [
-    "/screenshots/fieldpro-1.svg",
-    "/screenshots/fieldpro-2.svg",
-    "/screenshots/fieldpro-3.svg",
+    assetPath("/screenshots/fieldpro-1.svg"),
+    assetPath("/screenshots/fieldpro-2.svg"),
+    assetPath("/screenshots/fieldpro-3.svg"),
   ],
   whitehax: [
-    "/screenshots/whitehax-1.svg",
-    "/screenshots/whitehax-2.svg",
-    "/screenshots/whitehax-3.svg",
+    assetPath("/screenshots/whitehax-1.svg"),
+    assetPath("/screenshots/whitehax-2.svg"),
+    assetPath("/screenshots/whitehax-3.svg"),
   ],
 };
 
@@ -695,7 +697,7 @@ function SkillCard({ category, items }: Skill) {
 
 function ScreenshotCarousel({ images, name }: { images: string[]; name: string }) {
   const [index, setIndex] = useState(0);
-  const safeImages = images.length ? images : ["/screenshots/placeholder.svg"];
+  const safeImages = images.length ? images : [assetPath("/screenshots/placeholder.svg")];
 
   useEffect(() => {
     if (!safeImages.length) return;
@@ -1178,7 +1180,7 @@ export default function App() {
                   <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut" }} className="relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500/30 via-sky-500/20 to-emerald-500/20 blur-2xl" />
                     <div className="relative h-70 w-70 overflow-hidden rounded-full border border-white/50 p-2 shadow-2xl backdrop-blur-xl dark:border-white/10 md:h-72 md:w-72">
-                      <img src="/profile.jpg" alt="Atif Qamar profile" className="h-full w-full rounded-full object-cover" />
+                      <img src={assetPath("/profile.jpg")} alt="Atif Qamar profile" className="h-full w-full rounded-full object-cover" />
                     </div>
                   </motion.div>
                   <h2 className="mt-8 text-3xl font-semibold text-zinc-950 dark:text-white">{profile.name}</h2>
