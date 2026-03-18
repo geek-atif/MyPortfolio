@@ -922,7 +922,10 @@ function ProjectCard({ project }: { project: Project }) {
 
   return (
     <motion.div
-      variants={fadeUp}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
       whileHover={{ y: -6 }}
       className="group relative overflow-hidden rounded-[32px] border border-zinc-200/70 bg-white/60 p-6 shadow-[0_12px_50px_rgba(0,0,0,0.05)] backdrop-blur-2xl dark:border-white/10 dark:bg-white/5"
     >
@@ -1242,7 +1245,7 @@ export default function App() {
           <ScrollReveal>
             <SectionHeading eyebrow="Featured Projects" title="Built for Production" description="A showcase of AI-powered, fintech, SDK, and enterprise mobile work across Flutter, iOS, and Android." />
           </ScrollReveal>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} variants={staggerIn} className="mt-12 grid gap-6 xl:grid-cols-2">{projects.map((project) => <ProjectCard key={project.name} project={project} />)}</motion.div>
+          <div className="mt-12 grid gap-6 xl:grid-cols-2">{projects.map((project) => <ProjectCard key={project.name} project={project} />)}</div>
         </section>
 
         <section id="experience" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
