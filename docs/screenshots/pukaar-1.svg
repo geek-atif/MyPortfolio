@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="52%" stop-color="#db2777"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#bg)"/>
+  <rect x="88" y="96" width="1024" height="608" rx="38" fill="#ffffff10" stroke="#ffffff22"/>
+  <text x="126" y="186" fill="#ffffff" font-size="42" font-family="Arial, sans-serif" font-weight="700">Pukaar AI</text>
+  <text x="126" y="232" fill="#fce7f3" font-size="24" font-family="Arial, sans-serif">AI-powered baby care support for calmer early parenting</text>
+  <rect x="126" y="292" width="390" height="288" rx="28" fill="#ffffff12" stroke="#ffffff1d"/>
+  <text x="156" y="344" fill="#ffffff" font-size="24" font-family="Arial, sans-serif" font-weight="700">Care Intelligence</text>
+  <text x="156" y="390" fill="#fce7f3" font-size="20" font-family="Arial, sans-serif">Cry analysis and daily guidance</text>
+  <text x="156" y="424" fill="#fce7f3" font-size="20" font-family="Arial, sans-serif">Growth-stage support and routines</text>
+  <text x="156" y="458" fill="#fce7f3" font-size="20" font-family="Arial, sans-serif">Expert-backed parenting insights</text>
+  <rect x="606" y="244" width="220" height="422" rx="34" fill="#581c87" stroke="#f9a8d4"/>
+  <rect x="626" y="276" width="180" height="356" rx="24" fill="#fdf2f8"/>
+  <circle cx="716" cy="368" r="46" fill="#f9a8d4"/>
+  <rect x="654" y="444" width="124" height="20" rx="10" fill="#fbcfe8"/>
+  <rect x="654" y="480" width="124" height="20" rx="10" fill="#fbcfe8"/>
+  <rect x="876" y="320" width="176" height="118" rx="24" fill="#ffffff12" stroke="#ffffff20"/>
+  <text x="904" y="366" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="700">Shark Tank</text>
+  <text x="904" y="402" fill="#fce7f3" font-size="18" font-family="Arial, sans-serif">Product spotlight</text>
+  <rect x="876" y="470" width="176" height="118" rx="24" fill="#ffffff12" stroke="#ffffff20"/>
+  <text x="904" y="516" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="700">Parents First</text>
+  <text x="904" y="552" fill="#fce7f3" font-size="18" font-family="Arial, sans-serif">Confidence and care</text>
+</svg>
