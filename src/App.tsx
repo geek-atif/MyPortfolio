@@ -5,6 +5,8 @@ import {
   ArrowUp,
   Moon,
   Sun,
+  Menu,
+  X,
   Github,
   Linkedin,
   Mail,
@@ -121,6 +123,16 @@ const techStack = [
   // { label: "Firebase" },
   // { label: "REST APIs" },
   // { label: "Clean Architecture" },
+];
+
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "GitHub", href: "#github" },
+  { label: "Recommendations", href: "#recommendations" },
+  { label: "Medium", href: "#blog" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const screenshotSets = {
@@ -1076,6 +1088,7 @@ export default function App() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   });
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -1117,21 +1130,28 @@ export default function App() {
       <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(to_right,rgba(113,113,122,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(113,113,122,0.08)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_48%,transparent_82%)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)]" />
 
       <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/60 backdrop-blur-2xl dark:border-white/10 dark:bg-[#08090c]/60">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#top" className="text-sm font-semibold tracking-[0.2em] text-zinc-900 dark:text-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
+          <a href="#top" className="max-w-[240px] text-sm font-semibold leading-tight tracking-[0.2em] text-zinc-900 dark:text-white sm:max-w-none">
             Atif Qamar / Senior Mobile Engineer
           </a>
           <nav className="hidden items-center gap-6 text-sm text-zinc-600 dark:text-zinc-400 md:flex">
-            <a href="#about" className="hover:text-zinc-950 dark:hover:text-white">About</a>
-            <a href="#projects" className="hover:text-zinc-950 dark:hover:text-white">Projects</a>
-            <a href="#experience" className="hover:text-zinc-950 dark:hover:text-white">Experience</a>
-            <a href="#github" className="hover:text-zinc-950 dark:hover:text-white">GitHub</a>
-            <a href="#recommendations" className="hover:text-zinc-950 dark:hover:text-white">Recommendations</a>
-            <a href="#blog" className="hover:text-zinc-950 dark:hover:text-white">Medium</a>
-            <a href="#contact" className="hover:text-zinc-950 dark:hover:text-white">Contact</a>
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-zinc-950 dark:hover:text-white">
+                {item.label}
+              </a>
+            ))}
           </nav>
           <div className="flex items-center gap-3">
             {/* <a href={profile.resume} {...getExternalLinkProps(profile.resume)} className="hidden rounded-full border border-zinc-200 bg-white/90 px-4 py-2 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white md:inline-flex">Resume</a> */}
+            <button
+              type="button"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="inline-flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-3 text-zinc-900 shadow-sm transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-white/5 dark:text-white md:hidden"
+            >
+              {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
             <button
               aria-label="Toggle theme"
               onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
@@ -1141,6 +1161,22 @@ export default function App() {
             </button>
           </div>
         </div>
+        {mobileMenuOpen ? (
+          <div className="border-t border-zinc-200/70 px-6 py-4 dark:border-white/10 md:hidden">
+            <nav className="mx-auto grid max-w-7xl gap-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl border border-zinc-200/80 bg-white/90 px-4 py-3 text-sm font-medium text-zinc-700 transition hover:border-zinc-300 hover:text-zinc-950 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300 dark:hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        ) : null}
       </header>
 
       <main id="top" className="relative z-10">
